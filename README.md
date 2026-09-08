@@ -12,4 +12,4 @@ Website Curriculum Vitae pribadi yang dibangun menggunakan HTML, CSS, dan JavaSc
 
 ## Live Website
 
-https://username.github.io/cv-website/
+https://syafiqhamdi.github.io/
