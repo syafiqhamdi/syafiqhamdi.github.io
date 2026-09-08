@@ -57,7 +57,7 @@ const profile = {
         "Publication Team ICEECIT"
         ]
     }
-    ]
+    ],
 
   education: [
     {
