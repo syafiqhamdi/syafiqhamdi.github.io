@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderHero();
   renderSummary();
   renderExperience();
-  renderOrganization();
   renderEducation();
   renderSkills();
   renderCertificates();
@@ -287,38 +286,6 @@ function renderExperience(filter = "work") {
 
 }
 
-// ===============================
-// ORGANIZATION
-// ===============================
-
-function renderOrganization(){
-
-  const items = profile.organization.map(org=>`
-    <div class="timeline-item">
-
-      <div class="year">${org.period}</div>
-
-      <h3>${org.name}</h3>
-
-      <p><strong>${org.role}</strong></p>
-
-      <ul>
-        ${org.achievements.map(a=>`<li>${a}</li>`).join("")}
-      </ul>
-
-    </div>
-  `).join("");
-
-  $("organization").innerHTML=`
-    <div class="section-tag">Organisasi</div>
-
-    <h2>Pengalaman Organisasi</h2>
-
-    <div class="timeline">
-      ${items}
-    </div>
-  `;
-}
 
 // ===============================
 // EDUCATION
