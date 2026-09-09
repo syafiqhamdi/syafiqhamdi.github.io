@@ -425,7 +425,9 @@ function renderSkills(){
 
 function renderCertificates(){
 
-  if(profile.certificates.length===0){
+  const certificates = profile.certificates || [];
+
+  if(certificates.length === 0){
 
     $("certificate").innerHTML=`
       <div class="section-tag">Sertifikat</div>
@@ -439,6 +441,31 @@ function renderCertificates(){
 
     return;
   }
+
+  const cards = certificates.map(cert => {
+    const isImage = [".png", ".jpg", ".jpeg", ".webp"].some(ext =>
+      cert.file.toLowerCase().endsWith(ext)
+    );
+
+    return `
+      <a class="certificate-card" href="${cert.file}" target="_blank" rel="noopener noreferrer">
+        ${isImage
+          ? `<img src="${cert.file}" alt="${cert.title}">`
+          : `<div class="certificate-preview"><span>PDF</span></div>`}
+        <p>${cert.title}</p>
+      </a>
+    `;
+  }).join("");
+
+  $("certificate").innerHTML = `
+    <div class="section-tag">Sertifikat</div>
+
+    <h2>Certificates</h2>
+
+    <div class="certificate-grid">
+      ${cards}
+    </div>
+  `;
 
 }
 

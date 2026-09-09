@@ -180,5 +180,58 @@ var profile = {
     ]
   },
 
-  certificates: []
+  certificates: [
+    {
+      title: "Panitia Muh Syafiq Hamdi",
+      file: "assets/certificates/certificate_1.pdf"
+    },
+    {
+      title: "Certificate of Committee ICEECIT'22",
+      file: "assets/certificates/certificate_2.pdf"
+    },
+    {
+      title: "Muhammad Syafiq Hamdi",
+      file: "assets/certificates/certificate_3.pdf"
+    },
+    {
+      title: "PDD Muhammad Syafiq Hamdi",
+      file: "assets/certificates/certificate_4.pdf"
+    },
+    {
+      title: "Scan 20240213",
+      file: "assets/certificates/certificate_5.pdf"
+    },
+    {
+      title: "Scan 20240213",
+      file: "assets/certificates/certificate_6.png"
+    },
+    {
+      title: "Sertifikat KEBTKE Syafiq",
+      file: "assets/certificates/certificate_7.pdf"
+    },
+    {
+      title: "Sertifikat Kompetensi PLC",
+      file: "assets/certificates/certificate_8.pdf"
+    },
+    {
+      title: "Sertifikat LKMM-TM",
+      file: "assets/certificates/certificate_9.pdf"
+    },
+    {
+      title: "Sertifikat Panwaslu 2023",
+      file: "assets/certificates/certificate_10.pdf"
+    },
+    {
+      title: "Sertifikat Peserta Lomba PLC",
+      file: "assets/certificates/certificate_11.pdf"
+    },
+    {
+      title: "Webinar Dukungan Insinyur dalam Menciptakan Kedaulatan, Ketahanan dan Kemandirian Pangan",
+      file: "assets/certificates/certificate_12.pdf"
+    },
+    {
+      title: "Sertifikat",
+      file: "assets/certificates/certificate_13.pdf"
+    }
+  ]
 };
