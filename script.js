@@ -65,16 +65,45 @@ function renderProfile(){
 
       <div class="social">
 
-          <a href="${p.social.linkedin}" target="_blank">in</a>
+          <a href="${p.social.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            ${iconLinkedIn()}
+          </a>
 
-          <a href="${p.social.instagram}" target="_blank">ig</a>
+          <a href="${p.social.instagram}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            ${iconInstagram()}
+          </a>
 
-          <a href="${p.social.x}" target="_blank">X</a>
+          <a href="${p.social.x}" target="_blank" rel="noopener noreferrer" aria-label="X">
+            ${iconX()}
+          </a>
 
       </div>
 
   </div>
   `;
+}
+
+function iconLinkedIn(){
+return `
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M6.5 8.5H3.2V21h3.3V8.5ZM4.85 3A1.95 1.95 0 1 0 4.85 6.9 1.95 1.95 0 0 0 4.85 3ZM21 13.85c0-3.76-2-5.51-4.67-5.51-2.15 0-3.11 1.18-3.65 2.01V8.5H9.38V21h3.3v-6.19c0-1.63.31-3.2 2.33-3.2 1.99 0 2.02 1.86 2.02 3.31V21H21v-7.15Z" fill="currentColor"/>
+</svg>`;
+}
+
+function iconInstagram(){
+return `
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+<circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="2"/>
+<circle cx="17.5" cy="6.6" r="1.1" fill="currentColor"/>
+</svg>`;
+}
+
+function iconX(){
+return `
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 4h3.8l3.45 4.55L16.2 4H19l-5.45 6.25L19.5 20h-3.8l-3.85-5.08L7.2 20H4.4l5.8-6.78L5 4Zm3.3 1.8H8l8.25 12.4h.3L8.3 5.8Z" fill="currentColor"/>
+</svg>`;
 }
 
 function iconMapPin(){

@@ -129,6 +129,7 @@ body{
   padding:28px;
   text-align:center;
   box-shadow:var(--shadow);
+  container-type:inline-size;
 
 }
 
@@ -215,6 +216,12 @@ body{
 
   transition:.25s;
 
+}
+
+.social a svg{
+  width:19px;
+  height:19px;
+  display:block;
 }
 
 .social a:hover{
@@ -1411,9 +1418,11 @@ footer{
 .profile-name{
 
     font-family:"Poppins";
-    font-size:24px;
+  font-size:clamp(14px, 8cqw, 24px);
 
     text-align:center;
+  white-space:nowrap;
+  line-height:1.2;
 
     margin:14px 0 20px;
 
