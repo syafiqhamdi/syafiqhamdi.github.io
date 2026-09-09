@@ -110,6 +110,13 @@ body{
 
 }
 
+.content,
+.section{
+
+  min-width:0;
+
+}
+
 /* =========================
       PROFILE CARD
 ========================= */
@@ -566,13 +573,15 @@ body{
   display:flex;
   align-items:center;
   gap:14px;
+  width:100%;
+  min-width:0;
 
 }
 
 .certificate-viewport{
 
+  flex:1 1 auto;
   min-width:0;
-  width:100%;
   overflow:hidden;
 
 }
@@ -687,6 +696,7 @@ body{
   margin-top:6px;
   font-weight:600;
   line-height:1.45;
+  overflow-wrap:anywhere;
 
 }
 
@@ -877,6 +887,12 @@ footer{
 
   .navbar{
     align-items:flex-start;
+  }
+
+  .brand{
+    max-width:100%;
+    font-size:clamp(14px, 5vw, 24px);
+    white-space:nowrap;
   }
 
 }
