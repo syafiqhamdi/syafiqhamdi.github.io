@@ -207,11 +207,6 @@ var profile = {
       file: "assets/certificates/certificate_5.pdf"
     },
     {
-      title: "Sertifikat Kompetensi dan Pelatihan Teknik",
-      category: "Lainnya",
-      file: "assets/certificates/certificate_6.png"
-    },
-    {
       title: "Piagam Penghargaan Kegiatan KEBTKE",
       category: "Seminar",
       file: "assets/certificates/certificate_7.pdf"
