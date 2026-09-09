@@ -30,40 +30,40 @@ function renderProfile(){
   document.getElementById("profile").innerHTML = `
   <div class="profile-card">
 
-      <div class="profile-photo-wrapper">
-          <img src="${p.photo}" class="profile-photo" alt="${p.name}">
+        <div class="profile-photo-wrapper profile-avatar-frame">
+          <img src="${p.photo}" class="profile-photo profile-avatar" alt="${p.name}">
       </div>
 
-      <div class="profile-badge">
+        <div class="profile-badge profile-role">
           MAHASISWA TEKNIK ELEKTRO
       </div>
 
-      <h1 class="profile-name">${p.name}</h1>
+        <h1 class="profile-name profile-card-name">${p.name}</h1>
 
-      <div class="contact">
+        <div class="contact profile-contact">
 
-          <div class="contact-item">
+          <div class="contact-item profile-contact-item">
               ${iconMapPin()}
               <span>${p.location}</span>
           </div>
 
-          <div class="contact-item">
+          <div class="contact-item profile-contact-item">
               ${iconPhone()}
               <span>${p.phone}</span>
           </div>
 
-          <div class="contact-item">
+          <div class="contact-item profile-contact-item">
               ${iconMail()}
               <span>${p.email}</span>
           </div>
 
       </div>
 
-      <a href="${p.cv}" download class="btn">
+      <a href="${p.cv}" download class="btn profile-cv">
           Download Curriculum Vitae
       </a>
 
-      <div class="social">
+      <div class="social profile-social">
 
           <a href="${p.social.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             ${iconLinkedIn()}

@@ -2936,6 +2936,7 @@ footer{
 
   .certificate-card p{
     max-height:none;
+    line-clamp:unset;
     -webkit-line-clamp:unset;
   }
 
@@ -3214,6 +3215,152 @@ footer{
     width:100% !important;
     margin:14px 0 0 !important;
     justify-content:center !important;
+  }
+
+}
+
+/* =========================
+    PROFILE CARD ISOLATION
+========================= */
+
+.profile-card{
+  width:100%;
+}
+
+.profile-avatar-frame{
+  display:block;
+  width:100%;
+  margin:0 0 18px;
+  padding:10px;
+  background:#DDF5F0;
+  border-radius:16px;
+}
+
+.profile-avatar{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+  border-radius:11px;
+}
+
+.profile-role{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  margin:0 auto 12px;
+  padding:6px 11px;
+  border-radius:999px;
+  background:#E2F6F1;
+  color:#0F766E;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.05em;
+  line-height:1.3;
+  text-align:center;
+}
+
+.profile-card-name{
+  display:block;
+  width:100%;
+  margin:0 0 18px;
+  color:#203B39;
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(18px, 2.1vw, 24px);
+  line-height:1.25;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+
+.profile-contact{
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+  width:100%;
+  margin:0 0 18px;
+  padding:16px 0;
+  border-top:1px solid #DCEDEA;
+  border-bottom:1px solid #DCEDEA;
+}
+
+.profile-contact-item{
+  display:flex;
+  align-items:flex-start;
+  gap:9px;
+  width:100%;
+  margin:0;
+  color:#58716D;
+  font-size:13px;
+  line-height:1.45;
+  text-align:left;
+}
+
+.profile-contact-item svg{
+  flex:0 0 18px;
+}
+
+.profile-contact-item span{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+
+.profile-cv{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:44px;
+  margin:0;
+  padding:11px 14px;
+  border-radius:11px;
+  text-align:center;
+}
+
+.profile-social{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  margin:14px 0 0;
+}
+
+@media (max-width:600px){
+
+  .profile-card{
+    padding:20px !important;
+  }
+
+  .profile-avatar-frame{
+    width:96px;
+    margin:0 auto 14px;
+    padding:7px;
+    border-radius:17px;
+  }
+
+  .profile-avatar{
+    height:118px;
+    aspect-ratio:auto;
+  }
+
+  .profile-role{
+    margin-bottom:10px;
+    font-size:9px;
+  }
+
+  .profile-card-name{
+    margin-bottom:16px;
+    font-size:clamp(18px, 7vw, 23px);
+  }
+
+  .profile-contact{
+    gap:10px;
+    margin-bottom:16px;
+    padding:14px 0;
+  }
+
+  .profile-contact-item{
+    font-size:12px;
   }
 
 }
