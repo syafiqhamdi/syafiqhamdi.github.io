@@ -1767,22 +1767,53 @@ footer{
   }
 
   .profile-card{
+    display:grid;
+    grid-template-columns:92px minmax(0,1fr);
+    column-gap:14px;
+    row-gap:8px;
     padding:18px;
     border-radius:16px;
   }
 
   .profile-photo-wrapper{
-    max-width:180px;
-    margin:0 auto 14px;
-    padding:9px;
+    grid-column:1;
+    grid-row:1 / span 3;
+    width:92px;
+    height:112px;
+    margin:0;
+    padding:7px;
+    border-radius:15px;
+    align-self:start;
+  }
+
+  .profile-photo{
+    height:100%;
+    aspect-ratio:auto;
+    border-radius:10px;
+  }
+
+  .profile-badge{
+    grid-column:2;
+    grid-row:1;
+    justify-self:start;
+    margin:0;
+    padding:5px 9px;
+    font-size:9px;
+    letter-spacing:.4px;
   }
 
   .profile-card .profile-name{
+    grid-column:2;
+    grid-row:2;
+    align-self:center;
+    margin:0;
+    text-align:left;
     font-size:clamp(13px, 6.5cqw, 19px);
-    margin:12px 0 16px;
   }
 
   .contact{
+    grid-column:1 / -1;
+    grid-row:4;
     margin:18px 0;
     padding:14px 0;
   }
@@ -1795,11 +1826,15 @@ footer{
   }
 
   .btn{
+    grid-column:1 / -1;
+    grid-row:5;
     padding:12px;
     font-size:14px;
   }
 
   .social{
+    grid-column:1 / -1;
+    grid-row:6;
     margin-top:16px;
   }
 
@@ -1845,6 +1880,10 @@ footer{
     border-radius:16px;
   }
 
+  .section:not(#certificate){
+    border-top:3px solid #CCFBF1;
+  }
+
   .section:hover{
     transform:none;
     box-shadow:none;
@@ -1861,6 +1900,10 @@ footer{
     grid-template-columns:1fr 1fr;
     gap:8px;
     margin:18px 0;
+  }
+
+  .filter-btn{
+    min-height:42px;
   }
 
   .filter-btn{
@@ -2004,6 +2047,10 @@ footer{
 
   .certificate-carousel{
     padding:4px 0;
+  }
+
+  .certificate-arrow{
+    box-shadow:0 5px 14px rgba(15,118,110,.12);
   }
 
   .certificate-card{
