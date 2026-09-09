@@ -2797,6 +2797,20 @@ footer{
 
   .certificate-carousel{
     gap:7px;
+    width:100%;
+  }
+
+  .certificate-viewport{
+    width:100%;
+  }
+
+  .certificate-track{
+    width:100%;
+  }
+
+  .certificate-track .certificate-card{
+    flex:0 0 100%;
+    width:100%;
   }
 
   .certificate-arrow{
