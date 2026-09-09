@@ -1670,3 +1670,270 @@ footer{
   width:100%;
   text-align:center;
 }
+
+/* =========================
+      MOBILE REFINEMENT
+========================= */
+
+@media (max-width:600px){
+
+  html,
+  body{
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  .navbar{
+    position:sticky;
+    flex-direction:row;
+    align-items:center;
+    gap:12px;
+    padding:13px 5%;
+  }
+
+  .brand{
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:18px;
+  }
+
+  .menu-toggle{
+    flex:0 0 auto;
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    background:var(--primary-light);
+    font-size:22px;
+  }
+
+  .menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    display:none;
+    width:100%;
+    padding:14px 5% 18px;
+    gap:4px;
+    background:rgba(255,255,255,.98);
+    border-bottom:1px solid var(--border);
+    box-shadow:0 14px 24px rgba(15,118,110,.1);
+  }
+
+  .menu.active{
+    display:flex;
+  }
+
+  .menu a{
+    padding:9px 10px;
+    border-radius:10px;
+  }
+
+  .menu a:hover{
+    background:var(--primary-light);
+  }
+
+  .container{
+    width:calc(100% - 24px);
+    margin:22px auto;
+    gap:20px;
+  }
+
+  #profile{
+    width:100%;
+  }
+
+  .profile-card{
+    padding:18px;
+    border-radius:16px;
+  }
+
+  .profile-photo-wrapper{
+    max-width:180px;
+    margin:0 auto 14px;
+    padding:9px;
+  }
+
+  .profile-card .profile-name{
+    font-size:clamp(13px, 6.5cqw, 19px);
+    margin:12px 0 16px;
+  }
+
+  .contact{
+    margin:18px 0;
+    padding:14px 0;
+  }
+
+  .contact-item{
+    gap:8px;
+    margin-bottom:11px;
+    font-size:13px;
+    line-height:1.45;
+  }
+
+  .btn{
+    padding:12px;
+    font-size:14px;
+  }
+
+  .social{
+    margin-top:16px;
+  }
+
+  .hero-banner{
+    padding:24px 20px;
+    border-radius:16px;
+  }
+
+  .hero-banner h1{
+    font-size:clamp(25px, 8vw, 30px);
+    overflow-wrap:anywhere;
+  }
+
+  .hero-banner p{
+    font-size:14px;
+    line-height:1.5;
+  }
+
+  .hero-action{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+  }
+
+  .hero-btn,
+  .hero-outline{
+    padding:11px 10px;
+    text-align:center;
+    font-size:13px;
+  }
+
+  .hero-stat{
+    gap:7px;
+  }
+
+  .hero-stat span{
+    padding:7px 10px;
+    font-size:11px;
+  }
+
+  .section{
+    padding:20px 16px;
+    border-radius:16px;
+  }
+
+  .section:hover{
+    transform:none;
+    box-shadow:none;
+  }
+
+  .section h2{
+    margin-bottom:14px;
+    font-size:22px;
+    line-height:1.25;
+  }
+
+  .filter-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin:18px 0;
+  }
+
+  .filter-btn{
+    padding:9px 8px;
+    font-size:12px;
+  }
+
+  .timeline{
+    margin-left:0;
+  }
+
+  .timeline-item{
+    padding-left:28px;
+    margin-bottom:20px;
+  }
+
+  .timeline::before{
+    left:5px;
+  }
+
+  .timeline-item::before{
+    left:-2px;
+    width:14px;
+    height:14px;
+  }
+
+  .timeline-content{
+    padding:14px;
+    border-radius:12px;
+  }
+
+  .timeline-content h3{
+    font-size:16px;
+    line-height:1.35;
+  }
+
+  .timeline-content ul{
+    padding-left:16px;
+    font-size:13px;
+    line-height:1.55;
+  }
+
+  .certificate-filters{
+    margin:18px 0;
+    gap:7px;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:4px;
+    scrollbar-width:none;
+  }
+
+  .certificate-filters::-webkit-scrollbar{
+    display:none;
+  }
+
+  .certificate-filter{
+    flex:0 0 auto;
+    padding:7px 10px;
+    font-size:12px;
+  }
+
+  .certificate-card-body{
+    padding:13px;
+  }
+
+  .certificate-card p{
+    font-size:14px;
+  }
+
+  .certificate-preview,
+  .certificate-card img{
+    height:125px;
+  }
+
+  .certificate-carousel-status{
+    margin-top:10px;
+    font-size:12px;
+  }
+
+  .project-grid,
+  .summary-grid,
+  .info-row{
+    grid-template-columns:1fr;
+  }
+
+  .project-card{
+    padding:16px;
+  }
+
+  .edu-card{
+    padding:16px;
+  }
+
+  footer{
+    padding:28px 16px;
+    font-size:13px;
+  }
+
+}
