@@ -2084,6 +2084,147 @@ footer{
 @media (max-width:600px){
 
   body{
+    color:#243B3A;
+    line-height:1.6;
+  }
+
+  .navbar{
+    background:#FFFFFF;
+    border-bottom:1px solid #D8ECE8;
+    box-shadow:0 4px 14px rgba(15,118,110,.08);
+  }
+
+  .brand{
+    color:var(--primary);
+  }
+
+  .menu-toggle{
+    background:#E7F7F3;
+    color:var(--primary);
+  }
+
+  .menu{
+    background:#FFFFFF;
+    border-bottom:1px solid #D8ECE8;
+  }
+
+  .menu a{
+    color:#3D5B58;
+  }
+
+  .container{
+    gap:10px;
+  }
+
+  #profile{
+    padding:14px 12px 6px;
+  }
+
+  .profile-card{
+    padding:16px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(15,118,110,.1);
+  }
+
+  .profile-photo-wrapper{
+    width:84px;
+    height:104px;
+  }
+
+  .profile-card .profile-name{
+    font-size:clamp(16px, 6.2cqw, 19px);
+  }
+
+  .contact-item{
+    color:#526B68;
+    font-size:13px;
+  }
+
+  #hero{
+    padding:0 12px;
+  }
+
+  .hero-banner{
+    min-height:0;
+    display:block;
+    padding:24px 20px;
+    border-radius:18px;
+  }
+
+  .hero-banner h1{
+    margin:14px 0 10px;
+    font-size:27px;
+    line-height:1.2;
+  }
+
+  .hero-banner p{
+    margin-bottom:18px;
+    font-size:14px;
+  }
+
+  .hero-stat span{
+    font-size:11px;
+    line-height:1.35;
+  }
+
+  .section{
+    padding:22px 18px;
+    border-radius:18px 18px 0 0;
+    box-shadow:0 -2px 12px rgba(15,118,110,.04);
+  }
+
+  .section h2{
+    font-size:23px;
+  }
+
+  .summary-text,
+  .timeline-content,
+  .project-card,
+  .edu-card,
+  .certificate-card{
+    font-size:14px;
+  }
+
+  .summary-text{
+    line-height:1.7;
+  }
+
+  .timeline-content h3,
+  .project-card h3{
+    font-size:17px;
+  }
+
+  .timeline-content ul{
+    font-size:14px;
+    line-height:1.65;
+  }
+
+  .year{
+    font-size:12px;
+  }
+
+  .certificate-heading h2{
+    margin-bottom:4px;
+  }
+
+  .certificate-count{
+    font-size:12px;
+  }
+
+  .certificate-card p{
+    font-size:16px;
+    line-height:1.5;
+  }
+
+  .certificate-link{
+    font-size:12px;
+  }
+
+}
+
+@media (max-width:600px){
+
+  body{
     background:#EEF8F6;
   }
 
