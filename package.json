@@ -1,0 +1,24 @@
+{
+  "name": "syafiqhamdi.github.io",
+  "version": "1.0.0",
+  "description": "Website Curriculum Vitae pribadi yang dibangun menggunakan HTML, CSS, dan JavaScript.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syafiqhamdi/syafiqhamdi.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/syafiqhamdi/syafiqhamdi.github.io/issues"
+  },
+  "homepage": "https://github.com/syafiqhamdi/syafiqhamdi.github.io#readme",
+  "dependencies": {
+    "jsdom": "^30.0.1"
+  }
+}
