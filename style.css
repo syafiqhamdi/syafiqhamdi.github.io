@@ -1484,3 +1484,26 @@ footer{
     opacity:1;
     transform:translateY(0);
 }
+
+/* =========================
+    PROFILE CARD FIX
+========================= */
+
+#profile .profile-card{
+  width:100%;
+  overflow:hidden;
+}
+
+#profile .profile-photo-wrapper{
+  width:100%;
+}
+
+#profile .contact-item span{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+
+#profile .btn{
+  width:100%;
+  text-align:center;
+}
