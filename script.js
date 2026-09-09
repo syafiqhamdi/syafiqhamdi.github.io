@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProfile();
   renderHero();
   renderSummary();
-  renderExperience();
+  renderExperience("all");
   renderProjects();
   renderEducation();
   renderSkills();
@@ -219,21 +219,23 @@ function renderSummary() {
 // EXPERIENCE
 // ===============================
 
-function renderExperience(filter = "work") {
+function renderExperience(filter = "all") {
 
-  const data =
-    filter === "work"
-      ? profile.experience
-      : filter === "org"
-        ? profile.organization
-        : profile.committee;
+  const sourceMap = {
+    all: [...profile.experience, ...profile.organization, ...profile.committee],
+    work: profile.experience,
+    org: profile.organization,
+    committee: profile.committee
+  };
 
-  const title =
-    filter === "work"
-      ? "Pengalaman Kerja"
-      : filter === "org"
-        ? "Pengalaman Organisasi"
-        : "Pengalaman Kepanitiaan";
+  const titleMap = {
+    all: "Semua Pengalaman",
+    work: "Pengalaman Kerja",
+    org: "Pengalaman Organisasi",
+    committee: "Pengalaman Kepanitiaan"
+  };
+
+  const data = sourceMap[filter] || sourceMap.all;
 
   const timeline = data.map(item => {
 
@@ -265,9 +267,15 @@ function renderExperience(filter = "work") {
 
     <div class="section-tag">Pengalaman</div>
 
-    <h2>${title}</h2>
+    <h2>${titleMap[filter] || titleMap.all}</h2>
 
     <div class="filter-group">
+
+      <button
+        class="filter-btn ${filter==="all"?"active":""}"
+        onclick="renderExperience('all')">
+        Semua
+      </button>
 
       <button
         class="filter-btn ${filter==="work"?"active":""}"
