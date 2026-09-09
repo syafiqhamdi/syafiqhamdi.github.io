@@ -253,7 +253,7 @@ function renderSummary() {
 // EXPERIENCE
 // ===============================
 
-function renderExperience(filter = "all") {
+function renderExperience(filter = "all", expanded = false) {
 
   const sourceMap = {
     all: [...profile.experience, ...profile.organization, ...profile.committee],
@@ -269,7 +269,9 @@ function renderExperience(filter = "all") {
     committee: "Pengalaman Kepanitiaan"
   };
 
-  const data = sourceMap[filter] || sourceMap.all;
+  const fullData = sourceMap[filter] || sourceMap.all;
+  const isAll = filter === "all";
+  const data = isAll && !expanded ? fullData.slice(0, 4) : fullData;
 
   const timeline = data.map(item => {
 
@@ -334,6 +336,13 @@ function renderExperience(filter = "all") {
     <div class="timeline">
       ${timeline}
     </div>
+
+    ${isAll && fullData.length > 4 ? `
+      <button class="experience-more" type="button" onclick="renderExperience('all', ${!expanded})">
+        <span>${expanded ? "Tampilkan lebih sedikit" : "Selengkapnya"}</span>
+        <span class="experience-more-icon" aria-hidden="true">${expanded ? "↑" : "↓"}</span>
+      </button>
+    ` : ""}
 
   `;
 
@@ -457,7 +466,7 @@ function renderSkills(){
 // CERTIFICATES
 // ===============================
 
-function renderCertificates(filter = "Semua"){
+function renderCertificates(filter = "Semua", carouselIndex = 0){
 
   const certificates = profile.certificates || [];
 
@@ -481,7 +490,7 @@ function renderCertificates(filter = "Semua"){
     ? certificates
     : certificates.filter(cert => cert.category === filter);
 
-  const cards = visibleCertificates.map(cert => {
+  const createCertificateCard = cert => {
     const isImage = [".png", ".jpg", ".jpeg", ".webp"].some(ext =>
       cert.file.toLowerCase().endsWith(ext)
     );
@@ -498,7 +507,14 @@ function renderCertificates(filter = "Semua"){
         </div>
       </a>
     `;
-  }).join("");
+  };
+
+  const cards = visibleCertificates.map(createCertificateCard).join("");
+  const isCarousel = filter === "Semua";
+  const carouselWindowSize = 3;
+  const maxCarouselIndex = Math.max(0, visibleCertificates.length - carouselWindowSize);
+  const activeCarouselIndex = Math.min(Math.max(carouselIndex, 0), maxCarouselIndex);
+  const carouselCards = visibleCertificates.map(createCertificateCard).join("");
 
   $("certificate").innerHTML = `
     <div class="section-tag">Sertifikat</div>
@@ -520,10 +536,61 @@ function renderCertificates(filter = "Semua"){
       `).join("")}
     </div>
 
-    <div class="certificate-grid">
-      ${cards}
-    </div>
+    ${isCarousel ? `
+      <div class="certificate-carousel">
+        <button class="certificate-arrow" type="button"
+          aria-label="Sertifikat sebelumnya"
+          ${activeCarouselIndex === 0 ? "disabled" : ""}
+          onclick="renderCertificates('Semua', ${activeCarouselIndex - 1})">
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <div class="certificate-viewport">
+          <div class="certificate-track" data-certificate-index="${activeCarouselIndex}">
+            ${carouselCards}
+          </div>
+        </div>
+
+        <button class="certificate-arrow" type="button"
+          aria-label="Sertifikat selanjutnya"
+          ${activeCarouselIndex === maxCarouselIndex ? "disabled" : ""}
+          onclick="renderCertificates('Semua', ${activeCarouselIndex + 1})">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <p class="certificate-carousel-status">${activeCarouselIndex + 1}-${Math.min(activeCarouselIndex + carouselWindowSize, visibleCertificates.length)} dari ${visibleCertificates.length} sertifikat</p>
+    ` : `
+      <div class="certificate-grid">
+        ${cards}
+      </div>
+    `}
   `;
+
+  if(isCarousel){
+    if(typeof requestAnimationFrame === "function"){
+      requestAnimationFrame(positionCertificateCarousel);
+    }else{
+      positionCertificateCarousel();
+    }
+  }
+
+}
+
+function positionCertificateCarousel(){
+
+  const track = document.querySelector(".certificate-track");
+  const firstCard = track?.querySelector(".certificate-card");
+
+  if(!track || !firstCard){
+    return;
+  }
+
+  const index = Number(track.dataset.certificateIndex || 0);
+  const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+  const offset = index * (firstCard.getBoundingClientRect().width + gap);
+
+  track.style.transform = `translateX(-${offset}px)`;
 
 }
 

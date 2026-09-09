@@ -561,6 +561,76 @@ body{
 
 }
 
+.certificate-carousel{
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+}
+
+.certificate-viewport{
+
+  min-width:0;
+  width:100%;
+  overflow:hidden;
+
+}
+
+.certificate-track{
+
+  display:flex;
+  gap:18px;
+  transition:transform .45s cubic-bezier(.22,.61,.36,1);
+
+}
+
+.certificate-track .certificate-card{
+
+  flex:0 0 calc((100% - 36px) / 3);
+
+}
+
+.certificate-arrow{
+
+  flex:0 0 42px;
+  width:42px;
+  height:42px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  background:#fff;
+  color:var(--primary);
+  cursor:pointer;
+  font-size:22px;
+  line-height:1;
+  transition:background .2s ease, color .2s ease, transform .2s ease;
+
+}
+
+.certificate-arrow:hover:not(:disabled){
+
+  background:var(--primary);
+  color:#fff;
+  transform:scale(1.06);
+
+}
+
+.certificate-arrow:disabled{
+
+  cursor:not-allowed;
+  opacity:.35;
+
+}
+
+.certificate-carousel-status{
+
+  margin-top:14px;
+  color:var(--text-light);
+  font-size:13px;
+  text-align:center;
+
+}
+
 .certificate-preview{
 
   display:flex;
@@ -635,12 +705,39 @@ body{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 
+  .certificate-track{
+    gap:18px;
+  }
+
+  .certificate-track .certificate-card{
+    flex-basis:calc((100% - 18px) / 2);
+  }
+
 }
 
 @media (max-width:560px){
 
   .certificate-grid{
     grid-template-columns:1fr;
+  }
+
+  .certificate-carousel{
+    gap:8px;
+  }
+
+  .certificate-arrow{
+    flex-basis:34px;
+    width:34px;
+    height:34px;
+    font-size:18px;
+  }
+
+  .certificate-track{
+    gap:18px;
+  }
+
+  .certificate-track .certificate-card{
+    flex-basis:100%;
   }
 
   .certificate-heading{
@@ -919,6 +1016,46 @@ footer{
 .timeline-content ul{
 
   padding-left:18px;
+
+}
+
+.experience-more{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  width:100%;
+  margin-top:4px;
+  padding:13px 18px;
+  border:1px solid #99F6E4;
+  border-radius:12px;
+  background:#F0FDFA;
+  color:var(--primary);
+  cursor:pointer;
+  font:inherit;
+  font-weight:700;
+  transition:background .2s ease, transform .2s ease;
+
+}
+
+.experience-more:hover{
+
+  background:#CCFBF1;
+  transform:translateY(-2px);
+
+}
+
+.experience-more-icon{
+
+  display:grid;
+  place-items:center;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:var(--primary);
+  color:#fff;
+  font-size:15px;
 
 }
 
