@@ -2871,3 +2871,72 @@ footer{
   }
 
 }
+
+/* =========================
+      MOBILE NO-CLIP PASS
+========================= */
+
+@media (max-width:600px){
+
+  .brand{
+    max-width:none;
+    overflow:visible;
+    text-overflow:clip;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+
+  .profile-card,
+  .content,
+  .section,
+  .timeline-content,
+  .project-card,
+  .edu-card,
+  .certificate-card-body{
+    min-width:0;
+    overflow:visible;
+  }
+
+  .profile-card .profile-name,
+  .profile-card .profile-badge,
+  .contact-item span,
+  .hero-banner h1,
+  .hero-banner p,
+  .timeline-content h3,
+  .timeline-content li,
+  .project-card h3,
+  .project-card p,
+  .edu-content h3,
+  .edu-content p,
+  .certificate-card p,
+  .certificate-count,
+  .certificate-link{
+    max-width:100%;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+
+  .filter-btn,
+  .certificate-filter,
+  .hero-btn,
+  .hero-outline,
+  .experience-more{
+    min-width:0;
+    height:auto;
+    min-height:40px;
+    white-space:normal;
+    line-height:1.3;
+  }
+
+  .hero-stat span{
+    min-width:0;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+
+  .certificate-card p{
+    max-height:none;
+    -webkit-line-clamp:unset;
+  }
+
+}
