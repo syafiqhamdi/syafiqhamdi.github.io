@@ -34,7 +34,7 @@ function renderProfile(){
       </div>
 
       <div class="profile-badge">
-          ELECTRICAL ENGINEER
+          MAHASISWA TEKNIK ELEKTRO
       </div>
 
       <h1 class="profile-name">${p.name}</h1>
@@ -124,7 +124,7 @@ function renderHero(){
       <div class="hero-text">
 
         <span class="hero-label">
-          ELECTRICAL ENGINEER
+          MAHASISWA TEKNIK ELEKTRO
         </span>
 
         <h1>${p.name}</h1>
@@ -150,7 +150,7 @@ function renderHero(){
         <div class="hero-stat">
 
           <span>IPK ${s.gpa}</span>
-          <span>${s.workExperience} Experience</span>
+          <span>${s.workExperience} Pengalaman</span>
           <span>${s.location}</span>
 
         </div>
