@@ -746,7 +746,30 @@ body{
   }
 
   .certificate-track .certificate-card{
-    flex-basis:100%;
+    flex-basis:calc((100% - 16px) / 3);
+  }
+
+  .certificate-preview,
+  .certificate-card img{
+    height:88px;
+  }
+
+  .certificate-card-body{
+    padding:9px;
+  }
+
+  .certificate-category{
+    font-size:8px;
+  }
+
+  .certificate-card p{
+    font-size:11px;
+    line-height:1.3;
+  }
+
+  .certificate-link{
+    margin-top:7px;
+    font-size:9px;
   }
 
   .certificate-heading{
