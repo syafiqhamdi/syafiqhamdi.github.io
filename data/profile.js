@@ -84,6 +84,63 @@ const profile = {
     }
   ],
 
+  committee: [
+    {
+      category: "committee",
+      period: "2022",
+      name: "International Conference on Electrical Engineering, Computer and Information Technology (ICEECIT)",
+      role: "Publication Team",
+      achievements: [
+        "Membuat desain publikasi dan kebutuhan visual untuk acara.",
+        "Mendukung kebutuhan promosi dan dokumentasi kegiatan konferensi."
+      ]
+    },
+    {
+      category: "committee",
+      period: "2022",
+      name: "Jember Line Tracer",
+      role: "Koordinator Tim Live Streaming",
+      achievements: [
+        "Mengatur jalannya siaran live selama kegiatan lomba.",
+        "Menjaga kelancaran komunikasi dan dokumentasi acara secara real-time."
+      ]
+    },
+    {
+      category: "committee",
+      period: "2021",
+      name: "Pembekalan dan Latihan Pengurus UKM",
+      role: "Pemateri",
+      achievements: [
+        "Menyampaikan materi pembekalan kepada pengurus baru.",
+        "Membantu membangun pemahaman organisasi dan tata kerja tim."
+      ]
+    }
+  ],
+
+  projects: [
+    {
+      title: "IoT Pallet Counter",
+      type: "Automation",
+      year: "2023",
+      description: "Sistem penghitung pallet otomatis berbasis IoT untuk mendukung monitoring proses produksi dan efisiensi operasional.",
+      stack: ["IoT", "Python", "Monitoring"]
+    },
+    {
+      title: "Troubleshooting & Monitoring Pallet Shuttle Car",
+      type: "Engineering",
+      year: "2023",
+      description: "Penelitian dan evaluasi terhadap troubleshooting serta monitoring pallet shuttle car untuk menjaga kinerja mesin produksi.",
+      stack: ["Maintenance", "Troubleshooting", "Analisis"]
+    },
+    {
+      title: "Visual Branding HME Universitas Jember",
+      type: "Design",
+      year: "2022",
+      description: "Pembuatan desain media promosi, kebutuhan publikasi, dan konten visual untuk mendukung kegiatan organisasi.",
+      stack: ["Photoshop", "Illustrator", "Branding"]
+    }
+  ],
+
   education: [
     {
       institution: "Universitas Jember",

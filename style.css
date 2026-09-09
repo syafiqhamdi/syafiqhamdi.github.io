@@ -295,6 +295,87 @@ body{
       TIMELINE
 ========================= */
 
+.project-grid{
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+
+}
+
+.project-card{
+
+  background:#F9FFFE;
+  border:1px solid #D1FAF5;
+  border-radius:16px;
+  padding:20px;
+
+}
+
+.project-top{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+
+}
+
+.project-type{
+
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#D1FAF5;
+  color:#0F766E;
+  font-size:12px;
+  font-weight:700;
+
+}
+
+.project-year{
+
+  color:#64748B;
+  font-size:12px;
+  font-weight:600;
+
+}
+
+.project-card h3{
+
+  font-size:20px;
+  margin-bottom:10px;
+
+}
+
+.project-card p{
+
+  color:#475569;
+  margin-bottom:14px;
+
+}
+
+.project-tags{
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+
+}
+
+.project-tag{
+
+  display:inline-block;
+  padding:7px 10px;
+  border-radius:999px;
+  background:#ECFEFF;
+  color:#0F766E;
+  font-size:12px;
+  font-weight:600;
+
+}
+
 .timeline{
 
   position:relative;

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderHero();
   renderSummary();
   renderExperience();
+  renderProjects();
   renderEducation();
   renderSkills();
   renderCertificates();
@@ -223,12 +224,16 @@ function renderExperience(filter = "work") {
   const data =
     filter === "work"
       ? profile.experience
-      : profile.organization;
+      : filter === "org"
+        ? profile.organization
+        : profile.committee;
 
   const title =
     filter === "work"
       ? "Pengalaman Kerja"
-      : "Pengalaman Organisasi";
+      : filter === "org"
+        ? "Pengalaman Organisasi"
+        : "Pengalaman Kepanitiaan";
 
   const timeline = data.map(item => {
 
@@ -276,6 +281,12 @@ function renderExperience(filter = "work") {
         Organisasi
       </button>
 
+      <button
+        class="filter-btn ${filter==="committee"?"active":""}"
+        onclick="renderExperience('committee')">
+        Kepanitiaan
+      </button>
+
     </div>
 
     <div class="timeline">
@@ -286,6 +297,40 @@ function renderExperience(filter = "work") {
 
 }
 
+// ===============================
+// PROJECTS
+// ===============================
+
+function renderProjects() {
+
+  const projects = profile.projects || [];
+
+  const cards = projects.map(project => `
+    <div class="project-card">
+      <div class="project-top">
+        <span class="project-type">${project.type}</span>
+        <span class="project-year">${project.year}</span>
+      </div>
+
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+
+      <div class="project-tags">
+        ${project.stack.map(tag => `<span class="project-tag">${tag}</span>`).join("")}
+      </div>
+    </div>
+  `).join("");
+
+  document.getElementById("projects").innerHTML = `
+    <div class="section-tag">Project</div>
+
+    <h2>Project yang Sudah Dibuat</h2>
+
+    <div class="project-grid">
+      ${cards}
+    </div>
+  `;
+}
 
 // ===============================
 // EDUCATION
