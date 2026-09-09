@@ -2326,4 +2326,79 @@ footer{
     box-shadow:0 10px 22px rgba(15,118,110,.1);
   }
 
+  .edu-card{
+    position:relative;
+    display:block;
+    padding:18px;
+    border:1px solid #D5F5EF;
+    border-radius:18px;
+    background:linear-gradient(145deg, #F8FFFE, #E9FAF6);
+    box-shadow:0 8px 18px rgba(15,118,110,.08);
+  }
+
+  .edu-icon{
+    width:48px;
+    height:48px;
+    margin-bottom:16px;
+    border-radius:14px;
+    background:#0F766E;
+    color:#FFFFFF;
+    font-size:21px;
+  }
+
+  .edu-content h3{
+    font-size:19px;
+    line-height:1.3;
+  }
+
+  .edu-content p{
+    margin-top:5px;
+    font-size:15px;
+  }
+
+  .edu-content span{
+    display:block;
+    margin-top:5px;
+    font-size:13px;
+  }
+
+  .edu-gpa{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-top:18px;
+    padding-top:12px;
+    border-top:1px solid #C7EAE3;
+    text-align:left;
+  }
+
+  .edu-gpa small{
+    color:#52726D;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .edu-gpa h2{
+    margin:0;
+    color:#0F766E;
+    font-size:27px;
+  }
+
+  .certificate-heading{
+    align-items:start;
+  }
+
+  .certificate-carousel{
+    align-items:stretch;
+  }
+
+  .certificate-arrow{
+    align-self:center;
+    flex-basis:36px;
+    width:36px;
+    height:36px;
+  }
+
 }
