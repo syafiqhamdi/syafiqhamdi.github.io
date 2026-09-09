@@ -2080,3 +2080,109 @@ footer{
   }
 
 }
+
+@media (max-width:600px){
+
+  body{
+    background:#EEF8F6;
+  }
+
+  .navbar{
+    background:#0F766E;
+    border-bottom-color:#0B5F59;
+    box-shadow:0 8px 20px rgba(15,118,110,.2);
+  }
+
+  .brand{
+    color:#FFFFFF;
+    letter-spacing:-.02em;
+  }
+
+  .menu-toggle{
+    background:rgba(255,255,255,.16);
+    color:#FFFFFF;
+  }
+
+  .menu{
+    background:#0F766E;
+    border-bottom:0;
+  }
+
+  .menu a{
+    color:#E6FFFB;
+  }
+
+  .menu a:hover{
+    background:rgba(255,255,255,.14);
+  }
+
+  .container{
+    width:100%;
+    margin:0;
+    gap:12px;
+  }
+
+  #profile{
+    padding:16px 12px 4px;
+  }
+
+  .profile-card{
+    border:0;
+    border-radius:22px;
+    box-shadow:0 14px 30px rgba(15,118,110,.16);
+  }
+
+  .content{
+    gap:12px;
+  }
+
+  .section{
+    border:0;
+    border-radius:22px 22px 0 0;
+    box-shadow:0 -4px 18px rgba(15,118,110,.04);
+  }
+
+  .section:not(#certificate){
+    border-top:0;
+  }
+
+  #hero{
+    padding:0 12px;
+  }
+
+  .hero-banner{
+    min-height:330px;
+    display:flex;
+    align-items:flex-end;
+    padding:24px 20px;
+    border-radius:22px;
+    background:linear-gradient(155deg, #0F766E 0%, #115E59 68%, #0B4F4A 100%);
+    box-shadow:0 14px 28px rgba(15,118,110,.2);
+  }
+
+  .hero-banner h1{
+    font-size:29px;
+  }
+
+  .hero-stat span{
+    background:rgba(255,255,255,.17);
+    border:1px solid rgba(255,255,255,.12);
+  }
+
+  .section-tag{
+    background:#D7F5EF;
+  }
+
+  .timeline-content,
+  .project-card,
+  .edu-card{
+    background:#F8FFFE;
+    box-shadow:0 5px 14px rgba(15,118,110,.05);
+  }
+
+  .certificate-card{
+    border-color:#D5F5EF;
+    box-shadow:0 10px 22px rgba(15,118,110,.1);
+  }
+
+}
