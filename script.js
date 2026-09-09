@@ -423,7 +423,7 @@ function renderSkills(){
 // CERTIFICATES
 // ===============================
 
-function renderCertificates(){
+function renderCertificates(filter = "Semua"){
 
   const certificates = profile.certificates || [];
 
@@ -442,7 +442,12 @@ function renderCertificates(){
     return;
   }
 
-  const cards = certificates.map(cert => {
+  const categories = ["Semua", ...new Set(certificates.map(cert => cert.category))];
+  const visibleCertificates = filter === "Semua"
+    ? certificates
+    : certificates.filter(cert => cert.category === filter);
+
+  const cards = visibleCertificates.map(cert => {
     const isImage = [".png", ".jpg", ".jpeg", ".webp"].some(ext =>
       cert.file.toLowerCase().endsWith(ext)
     );
@@ -452,7 +457,11 @@ function renderCertificates(){
         ${isImage
           ? `<img src="${cert.file}" alt="${cert.title}">`
           : `<div class="certificate-preview"><span>PDF</span></div>`}
-        <p>${cert.title}</p>
+        <div class="certificate-card-body">
+          <span class="certificate-category">${cert.category}</span>
+          <p>${cert.title}</p>
+          <span class="certificate-link">Lihat sertifikat <span aria-hidden="true">↗</span></span>
+        </div>
       </a>
     `;
   }).join("");
@@ -460,7 +469,22 @@ function renderCertificates(){
   $("certificate").innerHTML = `
     <div class="section-tag">Sertifikat</div>
 
-    <h2>Certificates</h2>
+    <div class="certificate-heading">
+      <div>
+        <h2>Certificates</h2>
+        <p class="certificate-count">${certificates.length} dokumen tersusun dalam beberapa kategori</p>
+      </div>
+    </div>
+
+    <div class="certificate-filters" role="tablist" aria-label="Filter sertifikat">
+      ${categories.map(category => `
+        <button class="certificate-filter ${filter === category ? "active" : ""}"
+          type="button" onclick="renderCertificates('${category}')">
+          ${category}
+          <span>${category === "Semua" ? certificates.length : certificates.filter(cert => cert.category === category).length}</span>
+        </button>
+      `).join("")}
+    </div>
 
     <div class="certificate-grid">
       ${cards}
