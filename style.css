@@ -2940,3 +2940,60 @@ footer{
   }
 
 }
+
+@media (max-width:600px){
+
+  #profile,
+  .content,
+  .section,
+  .profile-card,
+  .hero-banner,
+  .timeline-content,
+  .project-card,
+  .edu-card,
+  .certificate-card,
+  .certificate-card-body{
+    height:auto;
+    max-height:none;
+    overflow:visible;
+  }
+
+  .profile-card,
+  .hero-banner,
+  .section,
+  .timeline-content,
+  .project-card,
+  .edu-card,
+  .certificate-card,
+  .certificate-card-body,
+  .contact-item,
+  .hero-stat span,
+  .timeline-content h3,
+  .timeline-content li,
+  .project-card h3,
+  .project-card p,
+  .edu-content h3,
+  .edu-content p,
+  .certificate-card p{
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+
+  .profile-card .profile-name,
+  .brand{
+    overflow:visible;
+    white-space:normal;
+    text-overflow:clip;
+  }
+
+  .profile-photo,
+  .certificate-preview,
+  .certificate-card img{
+    height:170px;
+  }
+
+  .profile-photo{
+    height:100%;
+  }
+
+}
