@@ -117,6 +117,11 @@ function renderHero(){
 
   const p = profile.personal;
   const s = profile.stats;
+  const experienceCounts = {
+    work: profile.experience.length,
+    organization: profile.organization.length,
+    committee: profile.committee.length
+  };
 
   document.getElementById("hero").innerHTML = `
 
@@ -150,9 +155,9 @@ function renderHero(){
 
         <div class="hero-stat">
 
-          <span>IPK ${s.gpa}</span>
-          <span>${s.workExperience} Pengalaman</span>
-          <span>${s.location}</span>
+          <span>${experienceCounts.work} Pengalaman Kerja</span>
+          <span>${experienceCounts.organization} Pengalaman Organisasi</span>
+          <span>${experienceCounts.committee} Pengalaman Kepanitiaan</span>
 
         </div>
 
