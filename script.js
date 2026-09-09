@@ -514,7 +514,10 @@ function renderCertificates(filter = "Semua", carouselIndex = 0){
   const carouselWindowSize = 3;
   const maxCarouselIndex = Math.max(0, visibleCertificates.length - carouselWindowSize);
   const activeCarouselIndex = Math.min(Math.max(carouselIndex, 0), maxCarouselIndex);
-  const carouselCards = visibleCertificates.map(createCertificateCard).join("");
+  const carouselCards = visibleCertificates
+    .slice(activeCarouselIndex, activeCarouselIndex + carouselWindowSize)
+    .map(createCertificateCard)
+    .join("");
 
   $("certificate").innerHTML = `
     <div class="section-tag">Sertifikat</div>
@@ -546,7 +549,7 @@ function renderCertificates(filter = "Semua", carouselIndex = 0){
         </button>
 
         <div class="certificate-viewport">
-          <div class="certificate-track" data-certificate-index="${activeCarouselIndex}">
+          <div class="certificate-track">
             ${carouselCards}
           </div>
         </div>
@@ -566,31 +569,6 @@ function renderCertificates(filter = "Semua", carouselIndex = 0){
       </div>
     `}
   `;
-
-  if(isCarousel){
-    if(typeof requestAnimationFrame === "function"){
-      requestAnimationFrame(positionCertificateCarousel);
-    }else{
-      positionCertificateCarousel();
-    }
-  }
-
-}
-
-function positionCertificateCarousel(){
-
-  const track = document.querySelector(".certificate-track");
-  const firstCard = track?.querySelector(".certificate-card");
-
-  if(!track || !firstCard){
-    return;
-  }
-
-  const index = Number(track.dataset.certificateIndex || 0);
-  const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
-  const offset = index * (firstCard.getBoundingClientRect().width + gap);
-
-  track.style.transform = `translateX(-${offset}px)`;
 
 }
 

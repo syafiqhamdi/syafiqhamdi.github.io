@@ -1937,3 +1937,58 @@ footer{
   }
 
 }
+
+@keyframes certificate-swap{
+
+  from{
+    opacity:0;
+    transform:translateX(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+.certificate-track{
+  animation:certificate-swap .35s ease both;
+}
+
+@media (max-width:600px){
+
+  .content{
+    gap:16px;
+  }
+
+  .section{
+    background:linear-gradient(145deg, #FFFFFF, #F7FFFE);
+    box-shadow:0 8px 22px rgba(15,118,110,.07);
+  }
+
+  .profile-card{
+    background:linear-gradient(145deg, #FFFFFF, #F3FFFD);
+    border:1px solid #D5F5EF;
+    box-shadow:0 12px 28px rgba(15,118,110,.1);
+  }
+
+  .section-tag{
+    padding:5px 11px;
+    font-size:11px;
+    letter-spacing:.04em;
+  }
+
+  .certificate-carousel{
+    padding:4px 0;
+  }
+
+  .certificate-card{
+    box-shadow:0 8px 18px rgba(15,118,110,.06);
+  }
+
+  .certificate-track{
+    animation-duration:.3s;
+  }
+
+}
