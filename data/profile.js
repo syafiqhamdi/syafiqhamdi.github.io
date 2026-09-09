@@ -1,4 +1,4 @@
-const profile = {
+var profile = {
   personal: {
     name: "Muhammad Syafiq Hamdi",
     title: "Mahasiswa Teknik Elektro",
