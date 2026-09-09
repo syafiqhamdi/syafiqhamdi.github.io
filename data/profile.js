@@ -92,7 +92,8 @@ const profile = {
       role: "Publication Team",
       achievements: [
         "Membuat desain publikasi dan kebutuhan visual untuk acara.",
-        "Mendukung kebutuhan promosi dan dokumentasi kegiatan konferensi."
+        "Mendukung kebutuhan promosi dan dokumentasi kegiatan konferensi.",
+        "Bertanggung jawab dalam kebutuhan materi visual acara."
       ]
     },
     {
@@ -102,7 +103,8 @@ const profile = {
       role: "Koordinator Tim Live Streaming",
       achievements: [
         "Mengatur jalannya siaran live selama kegiatan lomba.",
-        "Menjaga kelancaran komunikasi dan dokumentasi acara secara real-time."
+        "Menjaga kelancaran komunikasi dan dokumentasi acara secara real-time.",
+        "Membantu koordinasi tim saat acara berlangsung."
       ]
     },
     {
@@ -112,7 +114,8 @@ const profile = {
       role: "Pemateri",
       achievements: [
         "Menyampaikan materi pembekalan kepada pengurus baru.",
-        "Membantu membangun pemahaman organisasi dan tata kerja tim."
+        "Membantu membangun pemahaman organisasi dan tata kerja tim.",
+        "Menjadi narasumber dalam penguatan kapasitas organisasi."
       ]
     }
   ],
