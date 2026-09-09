@@ -182,52 +182,52 @@ var profile = {
 
   certificates: [
     {
-      title: "Panitia Muh Syafiq Hamdi",
+      title: "Sertifikat Kepanitiaan Kegiatan Teknik",
       category: "Kepanitiaan",
       file: "assets/certificates/certificate_1.pdf"
     },
     {
-      title: "Certificate of Committee ICEECIT'22",
+      title: "Certificate of Appreciation - Publication Team ICEECIT 2022",
       category: "Kepanitiaan",
       file: "assets/certificates/certificate_2.pdf"
     },
     {
-      title: "Muhammad Syafiq Hamdi",
+      title: "Sertifikat Ketua UKM Kerohanian Islam Teknik",
       category: "Organisasi",
       file: "assets/certificates/certificate_3.pdf"
     },
     {
-      title: "PDD Muhammad Syafiq Hamdi",
+      title: "Sertifikat Kepanitiaan Divisi PDD",
       category: "Organisasi",
       file: "assets/certificates/certificate_4.pdf"
     },
     {
-      title: "Scan 20240213",
+      title: "Sertifikat Kompetensi dan Pelatihan Teknik",
       category: "Lainnya",
       file: "assets/certificates/certificate_5.pdf"
     },
     {
-      title: "Scan 20240213",
+      title: "Sertifikat Kompetensi dan Pelatihan Teknik",
       category: "Lainnya",
       file: "assets/certificates/certificate_6.png"
     },
     {
-      title: "Sertifikat KEBTKE Syafiq",
+      title: "Piagam Penghargaan Kegiatan KEBTKE",
       category: "Seminar",
       file: "assets/certificates/certificate_7.pdf"
     },
     {
-      title: "Sertifikat Kompetensi PLC",
+      title: "Sertifikat Kompetensi Programmable Logic Controller (PLC)",
       category: "Kompetensi",
       file: "assets/certificates/certificate_8.pdf"
     },
     {
-      title: "Sertifikat LKMM-TM",
+      title: "Sertifikat Peserta LKMM-TM",
       category: "Organisasi",
       file: "assets/certificates/certificate_9.pdf"
     },
     {
-      title: "Sertifikat Panwaslu 2023",
+      title: "Sertifikat Ketua Panwaslu 2023",
       category: "Kepanitiaan",
       file: "assets/certificates/certificate_10.pdf"
     },
@@ -237,12 +237,12 @@ var profile = {
       file: "assets/certificates/certificate_11.pdf"
     },
     {
-      title: "Webinar Dukungan Insinyur dalam Menciptakan Kedaulatan, Ketahanan dan Kemandirian Pangan",
+      title: "Sertifikat Peserta Webinar Dukungan Insinyur dalam Menciptakan Kedaulatan, Ketahanan dan Kemandirian Pangan",
       category: "Seminar",
       file: "assets/certificates/certificate_12.pdf"
     },
     {
-      title: "Sertifikat",
+      title: "Piagam Penghargaan Kegiatan Universitas Jember",
       category: "Lainnya",
       file: "assets/certificates/certificate_13.pdf"
     }
