@@ -182,7 +182,7 @@ var profile = {
 
   certificates: [
     {
-      title: "Sertifikat Kepanitiaan Kegiatan Teknik",
+      title: "Sertifikat Kepanitiaan Divisi PDD JLT X",
       category: "Kepanitiaan",
       file: "assets/certificates/certificate_1.pdf"
     },
@@ -197,17 +197,17 @@ var profile = {
       file: "assets/certificates/certificate_3.pdf"
     },
     {
-      title: "Sertifikat Kepanitiaan Divisi PDD",
-      category: "Organisasi",
+      title: "Sertifikat Kepanitiaan Divisi PDD XI",
+      category: "Kepanitiaan",
       file: "assets/certificates/certificate_4.pdf"
     },
     {
-      title: "Sertifikat Kompetensi dan Pelatihan Teknik",
-      category: "Lainnya",
+      title: "Sertifikat Asisten Laboratorium",
+      category: "Organisasi",
       file: "assets/certificates/certificate_5.pdf"
     },
     {
-      title: "Piagam Penghargaan Kegiatan KEBTKE",
+      title: "Sertifikat Peserta Webinar PPSDM KEBTKE",
       category: "Seminar",
       file: "assets/certificates/certificate_7.pdf"
     },
@@ -237,7 +237,7 @@ var profile = {
       file: "assets/certificates/certificate_12.pdf"
     },
     {
-      title: "Piagam Penghargaan Kegiatan Universitas Jember",
+      title: "Piagam PKKMB dan Latihan Bela Negara",
       category: "Lainnya",
       file: "assets/certificates/certificate_13.pdf"
     }
