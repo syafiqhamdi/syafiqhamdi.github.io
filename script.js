@@ -511,7 +511,10 @@ function renderCertificates(filter = "Semua", carouselIndex = 0){
 
   const cards = visibleCertificates.map(createCertificateCard).join("");
   const isCarousel = filter === "Semua";
-  const carouselWindowSize = 3;
+  const isMobile = typeof window !== "undefined"
+    && typeof window.matchMedia === "function"
+    && window.matchMedia("(max-width: 600px)").matches;
+  const carouselWindowSize = isMobile ? 1 : 3;
   const maxCarouselIndex = Math.max(0, visibleCertificates.length - carouselWindowSize);
   const activeCarouselIndex = Math.min(Math.max(carouselIndex, 0), maxCarouselIndex);
   const carouselCards = visibleCertificates
